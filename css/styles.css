@@ -508,20 +508,26 @@ img {
   padding-bottom: 100px;
 }
 
-/* ✅ corrected layout: no global gap + no margin-left:auto */
+/* контейнер футера */
 .footer-container {
   display: flex;
   align-items: baseline;
-  gap: 0;
 }
 
+/* 1-я колонка */
 .footer-brand {
   max-width: 264px;
-  margin-right: 120px; /* 1 -> 2 */
+  margin-right: 120px; /* расстояние между 1 и 2 колонкой */
 }
 
+/* 2-я колонка */
 .footer-social {
-  margin-right: 80px; /* 2 -> 3 */
+  margin-right: 80px; /* “базовый” отступ после social */
+}
+
+/* ✅ 3-я колонка (Subscribe) — прижимаем к правому краю */
+.footer-subscribe {
+  margin-left: auto; /* ВОТ ЭТОГО не хватало */
 }
 
 .footer-logo {
@@ -537,18 +543,15 @@ img {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-
   color: var(--cloud);
 }
 
 .footer-subtitle {
   margin-bottom: 16px;
-
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-
   color: var(--white);
 }
 
@@ -561,7 +564,6 @@ img {
 .footer .socials-link:focus {
   background-color: #31d0aa;
 }
-
 /* =========================
    SUBSCRIBE
 ========================= */
