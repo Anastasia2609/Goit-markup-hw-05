@@ -198,15 +198,6 @@ img {
 }
 
 .hero-btn {
-  display: block;
-  margin: 0 auto;
-
-  min-width: 169px;
-  height: 56px;
-  border: none;
-  border-radius: 4px;
-  padding: 16px 32px;
-
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -215,10 +206,19 @@ img {
 
   background-color: var(--iris);
   cursor: pointer;
+  border-radius: 4px;
+  padding: 16px 32px;
+  margin: 0 auto;
+  display: block;
+  min-width: 169px;
+  height: 56px;
+  border: none;
+
+  /* ✅ обязательная тень под кнопкой */
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
   transition: background-color var(--transition);
 }
-
 .hero-btn:hover,
 .hero-btn:focus {
   background-color: var(--ocean);
