@@ -849,13 +849,18 @@ img {
 
   transition: background-color var(--transition), border-color var(--transition), fill var(--transition);
 }
-
+.modal-check-icon {
+  fill: var(--cloud);
+  opacity: 0; /* по умолчанию скрыта */
+  transition: opacity var(--transition), fill var(--transition);
+}
 .modal-check-input:checked + .modal-check-label .modal-check-box {
   background-color: var(--ocean);
   border-color: var(--ocean);
-  fill: var(--cloud);
 }
-
+.modal-check-input:checked + .modal-check-label .modal-check-icon {
+  opacity: 1; /* ✅ галочка появляется */
+}
 .modal-submit {
   display: block;
   margin: 0 auto;
