@@ -162,7 +162,7 @@ button {
   }
 
   .nav-page {
-    gap: 120px; /* tablet/desktop spacing */
+    gap: 120px;
   }
 
   .nav-list {
@@ -231,7 +231,7 @@ button {
 
 @media (min-width: 1158px) {
   .nav-page {
-    gap: 76px; /* desktop override (fix “too big gap”) */
+    gap: 76px;
   }
 
   .add-list {
@@ -247,7 +247,7 @@ button {
 }
 
 /* =========================
-   HERO (mobile smaller paddings)
+   HERO
 ========================= */
 .hero {
   padding-top: 72px;
@@ -273,7 +273,7 @@ button {
 }
 
 .hero-title {
-  max-width: 216px; /* narrower wrap on mobile */
+  max-width: 216px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 72px;
@@ -334,10 +334,15 @@ button {
     padding-top: 188px;
     padding-bottom: 188px;
   }
+
+  /* ✅ FIX: desktop margin between title and button */
+  .hero-title {
+    margin-bottom: 48px;
+  }
 }
 
 /* =========================
-   FACTS (mobile typography + hide icon-box)
+   FACTS
 ========================= */
 .facts {
   padding-top: 96px;
@@ -351,7 +356,7 @@ button {
 }
 
 .facts-icon-box {
-  display: none; /* hide on mobile/tablet */
+  display: none;
 }
 
 .facts-title {
@@ -405,7 +410,7 @@ button {
   }
 
   .facts-icon-box {
-    display: flex; /* show only desktop */
+    display: flex;
     align-items: center;
     justify-content: center;
 
@@ -553,7 +558,7 @@ button {
 }
 
 /* =========================
-   PORTFOLIO (shadow always on mobile/tablet)
+   PORTFOLIO
 ========================= */
 .portfolio {
   padding-top: 96px;
@@ -660,6 +665,11 @@ button {
     width: calc((100% - 48px) / 3);
   }
 
+  /* ✅ FIX: desktop row gap must be smaller than tablet */
+  .portfolio-list {
+    gap: 48px 24px;
+  }
+
   /* desktop: shadow only on hover */
   .portfolio-link {
     box-shadow: none;
@@ -674,7 +684,7 @@ button {
 }
 
 /* =========================
-   FOOTER (mobile text left, subscribe right on desktop)
+   FOOTER
 ========================= */
 .footer {
   background-color: var(--navy);
@@ -708,7 +718,7 @@ button {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--cloud);
-  text-align: left; /* IMPORTANT: text not centered */
+  text-align: left;
 }
 
 .footer-social {
@@ -796,7 +806,6 @@ button {
   line-height: 1.5;
   letter-spacing: 0.04em;
 
-  cursor: pointer;
   transition: background-color var(--transition);
 }
 
@@ -863,14 +872,14 @@ button {
   }
 
   .footer-subscribe {
-    margin-left: auto; /* pinned right */
+    margin-left: auto;
     width: auto;
     max-width: none;
   }
 }
 
 /* =========================
-   MODAL (mobile size adjusted)
+   MODAL
 ========================= */
 .backdrop {
   position: fixed;
@@ -901,7 +910,7 @@ button {
   transform: translate(-50%, -50%);
 
   width: 288px;
-  max-width: 288px; /* narrower mobile dialog */
+  max-width: 288px;
   min-height: 584px;
 
   background-color: #fcfcfc;
@@ -915,8 +924,9 @@ button {
 }
 
 @media (min-width: 768px) {
+  /* ✅ FIX: modal must become wider on tablet/desktop */
   .modal {
-    max-width: 408px;
+    width: 408px;
     max-width: 408px;
     padding: 72px 24px 24px;
   }
@@ -1114,8 +1124,8 @@ button {
   color: var(--white);
 
   font-weight: 500;
-  font-size: 16px;   /* explicit typography */
-  line-height: 1.5;  /* explicit typography */
+  font-size: 16px;
+  line-height: 1.5;
   letter-spacing: 0.04em;
 
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -1128,7 +1138,7 @@ button {
 }
 
 /* =========================
-   MOBILE MENU (hidden on tablet/desktop)
+   MOBILE MENU
 ========================= */
 .mobile-menu {
   position: fixed;
@@ -1235,7 +1245,7 @@ button {
 }
 
 .mobile-contact-link.email {
-  font-weight: 500; /* highlighted weight */
+  font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
@@ -1244,7 +1254,7 @@ button {
 
 .mobile-socials {
   display: flex;
-  gap: 40px; /* not 56 */
+  gap: 40px;
   justify-content: flex-start;
   flex-wrap: wrap;
 }
