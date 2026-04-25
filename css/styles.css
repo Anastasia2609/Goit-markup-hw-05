@@ -917,6 +917,7 @@ button {
 @media (min-width: 768px) {
   .modal {
     max-width: 408px;
+    max-width: 408px;
     padding: 72px 24px 24px;
   }
 }
@@ -1226,9 +1227,9 @@ button {
 }
 
 .mobile-contact-link.phone {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.11;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--iris);
 }
